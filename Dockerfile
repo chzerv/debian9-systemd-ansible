@@ -6,6 +6,9 @@ ENV container docker
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Fix for UnicodeDecodeError when using pip
+ENV LANG C.UTF-8
+
 # Install Ansible via pip so we get the latest version.
 # "cryptography" is also a required dependency.
 ENV ansible_packages "ansible"
